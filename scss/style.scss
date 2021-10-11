@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(2px);
+  box-shadow: 0px 0px 3px grey;
+
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+
+    h1 {
+      margin: 1rem 0;
+    }
+
+    .section__header {
+      display: flex;
+      align-items: center;
+
+      form {
+        display: flex;
+        align-items: center;
+
+        input {
+          height: 2rem;
+        }
+
+        button {
+          margin-left: 0.5rem;
+          height: 2rem;
+          background-color: transparent;
+          border: none;
+
+          img {
+            cursor: pointer;
+          }
+        }
+      }
+
+      div {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+main {
+  width: 95%;
+  margin: auto;
+
+  .bienvenida__container {
+    h1 {
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      margin: 0.5rem;
+    }
+  }
+
+  .container__img {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+
+    img {
+      height: 15rem;
+      width: 100%;
+      object-fit: cover;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+footer {
+  p {
+    text-align: center;
+    margin: 1rem 0;
+
+    a {
+      text-decoration: none;
+      color: black;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  main .container__img {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

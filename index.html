@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div
+        class="
+          header__container
+          d-flex
+          justify-content-between
+          align-items-center
+        "
+      >
+        <h1><a href="index.html">Unsplash API</a></h1>
+
+        <section class="section__header">
+          <form action="" id="formBusqueda">
+            <input type="search" placeholder="Buscar imágenes" autofocus />
+
+            <button type="submit">
+              <img src="img/search.svg" alt="search" />
+            </button>
+          </form>
+
+          <div>darkmode</div>
+        </section>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="bienvenida__container">
+          <h1>Bienvenido!</h1>
+          <p>Buscador de imágenes creado con JavaScript, HTML y CSS.</p>
+          <p>Toque la imagen que quiera para descargar..</p>
+        </div>
+
+        <section class="container__img"></section>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Created & designed by
+        <a
+          href="https://github.com/franRappazzini"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Francisco Rappazzini</a
+        >.
+      </p>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

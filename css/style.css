@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(2px);
+  box-shadow: 0px 0px 3px grey;
+}
+
+header .header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+}
+
+header .header__container h1 {
+  margin: 1rem 0;
+}
+
+header .header__container .section__header {
+  display: flex;
+  align-items: center;
+}
+
+header .header__container .section__header form {
+  display: flex;
+  align-items: center;
+}
+
+header .header__container .section__header form input {
+  height: 2rem;
+}
+
+header .header__container .section__header form button {
+  margin-left: 0.5rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+}
+
+header .header__container .section__header form button img {
+  cursor: pointer;
+}
+
+header .header__container .section__header div {
+  margin-left: 1rem;
+}
+
+main {
+  width: 95%;
+  margin: auto;
+}
+
+main .bienvenida__container h1 {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+main .bienvenida__container p {
+  text-align: center;
+  margin: 0.5rem;
+}
+
+main .container__img {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+main .container__img img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+main .container__img img:hover {
+  cursor: pointer;
+}
+
+footer p {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+footer p a {
+  text-decoration: none;
+  color: black;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 450px) {
+  main .container__img {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*# sourceMappingURL=style.css.map */
