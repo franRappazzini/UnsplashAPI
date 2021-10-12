@@ -77,7 +77,7 @@ function render() {
 
 function darkMode() {
   // para que aplique automaticamente el dark mode si lo dejo asi el user
-  localStorage.getItem("DarkMode") ? darkModeON() : darkModeOFF();
+  localStorage.getItem("DarkMode") === "on" ? darkModeON() : darkModeOFF();
 
   $("#darkMode").click(() => darkModeON());
 
