@@ -7,7 +7,6 @@ Buscador de imágenes creado con JavaScript, HTML y CSS.
 * Consumo de API ([Unsplash](https://unsplash.com/developers))
 * Sass
 * BEM
-* SEO
 * Npm
 * Git
 
