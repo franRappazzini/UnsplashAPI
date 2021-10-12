@@ -1,5 +1,8 @@
 // ready
-$(() => preventForm());
+$(() => {
+  preventForm();
+  darkMode();
+});
 
 // -----var para
 let result = [];
@@ -22,6 +25,8 @@ function preventForm() {
       );
 
       getAPI();
+
+      darkMode();
     }
 
     $("input").val("");
@@ -68,4 +73,43 @@ function render() {
       window.open(e.links.download, "_blank");
     });
   });
+}
+
+function darkMode() {
+  // para que aplique automaticamente el dark mode si lo dejo asi el user
+  localStorage.getItem("DarkMode") ? darkModeON() : darkModeOFF();
+
+  $("#darkMode").click(() => darkModeON());
+
+  $("#lightMode").click(() => darkModeOFF());
+}
+
+// -----funciones del dark mode encendido-----
+function darkModeON() {
+  $("#darkMode").hide();
+  $("#lightMode").show();
+
+  $("body").addClass("dark-mode-intenso");
+  $("header").addClass("dark-mode-suave");
+  $("header").css("box-shadow", "none");
+  $("p, a, h1, h2, h6").addClass("dark-mode-light");
+  $("#svgSearch").css("fill", "white");
+
+  // guardo en el localStorage asi queda activado hasta que sea desactivado manualmente
+  localStorage.setItem("DarkMode", "on");
+}
+
+// -----funciones del dark mode apagado-----
+function darkModeOFF() {
+  $("#lightMode").hide();
+  $("#darkMode").show();
+
+  $("body").removeClass("dark-mode-intenso");
+  $("header").removeClass("dark-mode-suave");
+  $("header").css("box-shadow", "0px 0px 3px grey");
+  $("p, a, h1, h2, h6").removeClass("dark-mode-light");
+  $("#svgSearch").css("fill", "black");
+
+  // lo elimino del localStorage
+  localStorage.removeItem("DarkMode");
 }

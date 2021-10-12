@@ -26,7 +26,7 @@ header .header__container h1 {
 }
 
 header .header__container h1 a {
-  color: black;
+  color: currentColor;
   text-decoration: none;
 }
 
@@ -51,7 +51,7 @@ header .header__container .section__header form button {
   border: none;
 }
 
-header .header__container .section__header form button img {
+header .header__container .section__header form button svg {
   cursor: pointer;
 }
 
@@ -65,13 +65,17 @@ main {
 }
 
 main .bienvenida__container h1 {
-  margin: 1rem 0;
+  margin: 3rem 0 1rem 0;
   text-align: center;
 }
 
 main .bienvenida__container p {
   text-align: center;
   margin: 0.5rem;
+}
+
+main .bienvenida__container .aclaracion__text {
+  font-size: 14px;
 }
 
 main .bienvenida__container .loader__text {
@@ -132,5 +136,17 @@ footer p a:hover {
   main .container__img {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.dark-mode-intenso {
+  background-color: #131c21;
+}
+
+.dark-mode-suave {
+  background-color: #262d31;
+}
+
+.dark-mode-light {
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
