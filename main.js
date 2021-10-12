@@ -1,20 +1,34 @@
 // ready
 $(() => preventForm());
 
+// -----var para
 let result = [];
 
+// -----detiene el envio del form-----
 function preventForm() {
   $("#formBusqueda").submit((e) => {
-    $(".container__img").empty();
-
     e.preventDefault();
 
-    getAPI();
+    if ($("input").val() != "") {
+      // borra el contenido del contenedor de las img
+      $(".container__img").empty();
+
+      // borra el texto de bienvenida
+      $(".bienvenida__container").empty();
+
+      // muestra el loader
+      $(".bienvenida__container").append(
+        `<h2 class="loader__text">Cargando...</h2>`
+      );
+
+      getAPI();
+    }
 
     $("input").val("");
   });
 }
 
+// -----obtengo datos de api-----
 function getAPI() {
   let input = $("input").val();
 
@@ -24,23 +38,26 @@ function getAPI() {
 
   $.get(URL, (request, state) => {
     if (state === "success") {
-      // console.log(request.results);
+      $(".bienvenida__container").empty();
+
       result = [];
 
+      // pusheo datos a 'result'
       request.results.forEach((r) => result.push(r));
 
       console.log(result);
       console.log(result[0].urls);
 
       render();
+
+      // para sacar el loader
+      $(".bienvenida__container").empty();
     }
   });
 }
 
+// -----renderiza las img-----
 function render() {
-  // borra el texto de bienvenida
-  $(".bienvenida__container").remove();
-
   result.forEach((e) => {
     $(".container__img").append(
       `<img src="${e.urls.regular}" alt="${e.alt_description}" />`

@@ -25,6 +25,11 @@ header .header__container h1 {
   margin: 1rem 0;
 }
 
+header .header__container h1 a {
+  color: black;
+  text-decoration: none;
+}
+
 header .header__container .section__header {
   display: flex;
   align-items: center;
@@ -69,6 +74,23 @@ main .bienvenida__container p {
   margin: 0.5rem;
 }
 
+main .bienvenida__container .loader__text {
+  padding: 1rem;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  animation: typing 3s steps(40);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 main .container__img {
   margin-top: 1rem;
   display: grid;
@@ -92,15 +114,21 @@ footer p {
 }
 
 footer p a {
-  text-decoration: none;
   color: black;
 }
 
 footer p a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 450px) {
+  header .header__container {
+    flex-direction: column;
+  }
+  header .header__container .section__header {
+    margin-bottom: 1rem;
+  }
   main .container__img {
     grid-template-columns: repeat(2, 1fr);
   }
