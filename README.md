@@ -1,5 +1,5 @@
 # UnsplashAPI
-Buscador de imágenes creado con JavaScript, HTML y CSS.
+Buscador de imágenes responsive creado con JavaScript, HTML y CSS.
 
 #### Skill utilizados:
 * jQuery
