@@ -5,7 +5,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-html header {
+header {
   position: sticky;
   top: 0;
   background-color: rgba(255, 255, 255, 0.9);
@@ -13,7 +13,7 @@ html header {
   box-shadow: 0px 0px 3px grey;
 }
 
-html header .header__container {
+header .header__container {
   max-width: 1440px;
   display: flex;
   justify-content: space-between;
@@ -22,67 +22,67 @@ html header .header__container {
   margin: auto;
 }
 
-html header .header__container h1 {
+header .header__container h1 {
   margin: 1rem 0;
 }
 
-html header .header__container h1 a {
+header .header__container h1 a {
   color: currentColor;
   text-decoration: none;
 }
 
-html header .header__container .section__header {
+header .header__container .section__header {
   display: flex;
   align-items: center;
 }
 
-html header .header__container .section__header form {
+header .header__container .section__header form {
   display: flex;
   align-items: center;
 }
 
-html header .header__container .section__header form input {
+header .header__container .section__header form input {
   height: 2rem;
   border: 1px solid;
   border-radius: 2px;
 }
 
-html header .header__container .section__header form button {
+header .header__container .section__header form button {
   margin-left: 0.5rem;
   height: 2rem;
   background-color: transparent;
   border: none;
 }
 
-html header .header__container .section__header form button svg {
+header .header__container .section__header form button svg {
   cursor: pointer;
 }
 
-html header .header__container .section__header div {
+header .header__container .section__header div {
   margin-left: 1rem;
 }
 
-html main {
+main {
   width: 95%;
   max-width: 1440px;
   margin: auto;
 }
 
-html main .bienvenida__container h1 {
+main .bienvenida__container h1 {
   margin: 3rem 0 1rem 0;
   text-align: center;
 }
 
-html main .bienvenida__container p {
+main .bienvenida__container p {
   text-align: center;
   margin: 0.5rem;
 }
 
-html main .bienvenida__container .aclaracion__text {
+main .bienvenida__container .aclaracion__text {
   font-size: 14px;
 }
 
-html main .bienvenida__container .loader__text {
+main .bienvenida__container .loader__text {
   padding: 1rem;
   text-align: center;
   overflow: hidden;
@@ -99,58 +99,58 @@ html main .bienvenida__container .loader__text {
   }
 }
 
-html main .container__img {
+main .container__img {
   margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
 }
 
-html main .container__img img {
+main .container__img img {
   height: 15rem;
   width: 100%;
   object-fit: cover;
 }
 
-html main .container__img img:hover {
+main .container__img img:hover {
   cursor: pointer;
 }
 
-html footer p {
+footer p {
   text-align: center;
   margin: 1rem 0;
 }
 
-html footer p a {
+footer p a {
   color: black;
 }
 
-html footer p a:hover {
+footer p a:hover {
   text-decoration: none;
   font-weight: 600;
 }
 
 @media only screen and (max-width: 450px) {
-  html header .header__container {
+  header .header__container {
     flex-direction: column;
   }
-  html header .header__container .section__header {
+  header .header__container .section__header {
     margin-bottom: 1rem;
   }
-  html main .container__img {
+  main .container__img {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-html .dark-mode-intenso {
+.dark-mode-intenso {
   background-color: #131c21;
 }
 
-html .dark-mode-suave {
+.dark-mode-suave {
   background-color: rgba(38, 45, 49, 0.9);
 }
 
-html .dark-mode-light {
+.dark-mode-light {
   color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
