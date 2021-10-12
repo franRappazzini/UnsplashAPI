@@ -4,7 +4,7 @@ $(() => {
   darkMode();
 });
 
-// -----var para
+// -----var para alojar los resultados de la api
 let result = [];
 
 // -----detiene el envio del form-----
@@ -63,18 +63,25 @@ function getAPI() {
 
 // -----renderiza las img-----
 function render() {
-  result.forEach((e) => {
-    $(".container__img").append(
-      `<img src="${e.urls.regular}" alt="${e.alt_description}" />`
-    );
+  if (result.length > 0) {
+    result.forEach((e) => {
+      $(".container__img").append(
+        `<img src="${e.urls.regular}" alt="${e.alt_description}" />`
+      );
 
-    // para abrir la img en otra ventana
-    $("img").click(() => {
-      window.open(e.links.download, "_blank");
+      // para abrir la img en otra ventana
+      $("img").click(() => {
+        window.open(e.links.download, "_blank");
+      });
     });
-  });
+  } else {
+    $(".container__img").append(
+      `<p>Lo siento, su busqueda no ha arrojado resultados. Intente nuevamente o haga una busqueda similar.</p>`
+    );
+  }
 }
 
+// -----dark mode btns-----
 function darkMode() {
   // para que aplique automaticamente el dark mode si lo dejo asi el user
   localStorage.getItem("DarkMode") === "on" ? darkModeON() : darkModeOFF();
