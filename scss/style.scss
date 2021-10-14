@@ -92,6 +92,10 @@ main {
       animation: typing 3s steps(40);
     }
 
+    .sin__resultados {
+      margin: 1rem 0;
+    }
+
     @keyframes typing {
       from {
         width: 0;

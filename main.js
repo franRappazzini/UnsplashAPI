@@ -51,12 +51,11 @@ function getAPI() {
       request.results.forEach((r) => result.push(r));
 
       console.log(result);
-      console.log(result[0].urls);
-
-      render();
 
       // para sacar el loader
       $(".bienvenida__container").empty();
+
+      render();
     }
   });
 }
@@ -74,11 +73,13 @@ function render() {
         window.open(e.links.download, "_blank");
       });
     });
-  } else {
-    $(".container__img").append(
-      `<p>Lo siento, su busqueda no ha arrojado resultados. Intente nuevamente o haga una busqueda similar.</p>`
+  } else if (result.length === 0) {
+    $(".bienvenida__container").append(
+      `<p class="sin__resultados">Lo siento, su busqueda no ha arrojado resultados. Intente nuevamente o haga una busqueda similar.</p>`
     );
   }
+
+  darkMode();
 }
 
 // -----dark mode btns-----
@@ -99,7 +100,7 @@ function darkModeON() {
   $("body").addClass("dark-mode-intenso");
   $("header").addClass("dark-mode-suave");
   $("header").css("box-shadow", "none");
-  $("p, a, h1, h2, h6").addClass("dark-mode-light");
+  $("p, a, h1, h2, h6, button").addClass("dark-mode-light");
   $("#svgSearch").css("fill", "white");
 
   // guardo en el localStorage asi queda activado hasta que sea desactivado manualmente
@@ -114,7 +115,7 @@ function darkModeOFF() {
   $("body").removeClass("dark-mode-intenso");
   $("header").removeClass("dark-mode-suave");
   $("header").css("box-shadow", "0px 0px 3px grey");
-  $("p, a, h1, h2, h6").removeClass("dark-mode-light");
+  $("p, a, h1, h2, h6, button").removeClass("dark-mode-light");
   $("#svgSearch").css("fill", "black");
 
   // lo elimino del localStorage
